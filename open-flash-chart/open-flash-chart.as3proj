@@ -4,7 +4,7 @@
   <output>
     <movie disabled="False" />
     <movie input="" />
-    <movie path="open-flash-chart.swf" />
+    <movie path="e:\public\open-flash-chart.swf" />
     <movie fps="60" />
     <movie width="600" />
     <movie height="400" />
@@ -32,6 +32,8 @@
     <option useResourceBundleMetadata="True" />
     <option warnings="True" />
     <option verboseStackTraces="True" />
+    <option linkReport="" />
+    <option loadExterns="" />
     <option additional="" />
     <option customSDK="" />
   </build>

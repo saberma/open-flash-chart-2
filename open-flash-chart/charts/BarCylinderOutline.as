@@ -4,9 +4,9 @@
 
 	public class BarCylinderOutline extends BarBase {
 
-		public function BarCylinderOutline( json:Object, group:Number ) {
+		public function BarCylinderOutline( json:Object, group:Number, collection:ObjectCollection ) {
 
-			super( json, group );
+			super( json, group, collection );
 		}
 
        //

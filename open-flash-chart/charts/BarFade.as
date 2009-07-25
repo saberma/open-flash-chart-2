@@ -4,8 +4,8 @@
 	
 	public class BarFade extends BarBase {
 		
-		public function BarFade( json:Object, group:Number ) {
-			super( json, group );
+		public function BarFade( json:Object, group:Number, collection:ObjectCollection ) {
+			super( json, group, collection );
 		}
 		
 		//

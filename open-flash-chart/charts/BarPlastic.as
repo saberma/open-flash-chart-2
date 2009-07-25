@@ -6,9 +6,9 @@
        public class BarPlastic extends BarBase {
 
           
-          public function BarPlastic( json:Object, group:Number ) {
+          public function BarPlastic( json:Object, group:Number, collection:ObjectCollection ) {
              
-             super( json, group );
+             super( json, group, collection );
           }
           
           //

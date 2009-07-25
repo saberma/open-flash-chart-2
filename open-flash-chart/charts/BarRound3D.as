@@ -5,9 +5,9 @@
        public class BarRound3D extends BarBase {
 
           
-          public function BarRound3D( json:Object, group:Number ) {
+          public function BarRound3D( json:Object, group:Number, collection:ObjectCollection ) {
              
-             super( json, group );
+             super( json, group, collection );
           }
           
           //

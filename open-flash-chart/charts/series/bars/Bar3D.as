@@ -7,6 +7,7 @@
 	
 	public class Bar3D extends Base {
 		
+		
 		public function Bar3D( index:Number, props:Properties, group:Number ) {
 			
 			super(index, props, group);

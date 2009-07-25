@@ -6,9 +6,9 @@ package charts {
 	
 	public class Bar extends BarBase {
 		
-		public function Bar( json:Object, group:Number ) {
+		public function Bar( json:Object, group:Number, collection:ObjectCollection ) {
 			
-			super( json, group );
+			super( json, group, collection );
 		}
 		
 		//

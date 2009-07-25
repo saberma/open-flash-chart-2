@@ -4,9 +4,9 @@
 
 	public class BarRound extends BarBase {
 
-		public function BarRound( json:Object, group:Number ) {
+		public function BarRound( json:Object, group:Number , collection:ObjectCollection) {
 
-			super( json, group );
+			super( json, group, collection );
 		}
 
 		//

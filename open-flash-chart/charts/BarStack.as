@@ -12,7 +12,7 @@
 	
 			// don't let the parent do anything, we just want to
 			// use some of the more useful methods
-			super( { }, 0);
+			super( { }, 0, null);
 			
 			// now do all the setup
 			var root:Properties = new Properties( {

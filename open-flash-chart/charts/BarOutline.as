@@ -10,7 +10,7 @@
 		protected var style:Object;
 		
 		
-		public function BarOutline( json:Object, group:Number ) {
+		public function BarOutline( json:Object, group:Number, collection:ObjectCollection ) {
 			
 			//
 			// specific value for outline
@@ -21,7 +21,7 @@
 			
 			object_helper.merge_2( json, this.style );
 			
-			super( json, group );
+			super( json, group, collection );
 		}
 		
 		//

@@ -10,7 +10,7 @@
 		// TODO: remove
 		protected var style:Object;
 		
-		public function BarSketch( json:Object, group:Number ) {
+		public function BarSketch( json:Object, group:Number, collection:ObjectCollection ) {
 			
 			//
 			// these are specific values to the Sketch
@@ -23,7 +23,7 @@
 			
 			object_helper.merge_2( json, this.style );
 			
-			super( style, group );
+			super( style, group, collection );
 		}
 	
 		//

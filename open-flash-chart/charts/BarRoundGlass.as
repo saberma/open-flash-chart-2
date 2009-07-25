@@ -5,9 +5,9 @@
 	public class BarRoundGlass extends BarBase {
 
 
-		public function BarRoundGlass( json:Object, group:Number ) {
+		public function BarRoundGlass( json:Object, group:Number, collection:ObjectCollection ) {
 
-			super( json, group );
+			super( json, group, collection );
 		}
 
 		//

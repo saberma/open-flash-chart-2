@@ -5,9 +5,9 @@
 	public class BarCylinder extends BarBase {
 
 
-		public function BarCylinder( json:Object, group:Number ) {
+		public function BarCylinder( json:Object, group:Number, collection:ObjectCollection ) {
 
-			super( json, group );
+			super( json, group, collection );
 		}
 
 		//

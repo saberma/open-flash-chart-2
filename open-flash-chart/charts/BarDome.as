@@ -5,9 +5,8 @@
 	public class BarDome extends BarBase {
 
 
-		public function BarDome( json:Object, group:Number ) {
-
-			super( json, group );
+		public function BarDome( json:Object, group:Number, collection:ObjectCollection ) {
+			super( json, group, collection );
 		}
 
 		//

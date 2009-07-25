@@ -13,7 +13,10 @@
 		protected var props:Properties;
 		protected var on_show:Properties;
 		
-		public function BarBase( json:Object, group:Number )
+		//2009.07.24 by MaHB
+		public var real_group:Array;
+		
+		public function BarBase( json:Object, group:Number, collection:ObjectCollection )
 		{
 		
 			var root:Properties = new Properties( {
@@ -56,7 +59,44 @@
 			this.group = group;
 			
 			this.values = this.props.get('values');
+			
+			//2009.07.24 by MaHB
+			this.real_group = new Array(this.values.length);
+			for ( var i:Number = 0; i < this.real_group.length; i++ )
+				this.real_group[i] = -1;
+				
+			init_real_group(collection);
+			
 			this.add_values();
+		}
+		
+		//2009.07.24 by MaHB
+		//特殊处理Bar3D
+		public function init_real_group ( collection:ObjectCollection) :void{
+			var last_group:Array = new Array(this.values.length);
+			for ( var k:Number = 0; k < last_group.length; k++ )
+				last_group[k] = -1;
+			tr.ace( "last_group:" + last_group );
+				
+			for ( var m:Number = 0; m < collection.sets.length; m++ ) {
+				var bar:Bar3D = collection.sets[m];
+				for ( var n:Number = 0; n < bar.values.length; n++ ) {
+					var val:Object = bar.values[n];
+					if (val != null)
+						last_group[n] = last_group[n] + 1;
+				}
+				tr.ace( "bar.real_group:" + bar.real_group );
+				tr.ace( "last_group:" + last_group );
+			}
+			for ( var i:Number = 0; i < this.values.length; i++ ) {
+				var val1:Object = this.values[i];
+				if (val1 != null) {
+					last_group[i] = last_group[i] + 1;
+					this.real_group[i] = last_group[i];
+				}
+			}
+			tr.ace( "bar.real_group:" + this.real_group );
+			tr.ace( "last_group:" + last_group );
 		}
 		
 		protected function get_on_show(json:Object): Properties {

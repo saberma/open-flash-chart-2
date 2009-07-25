@@ -6,9 +6,9 @@
 	
 	public class Candle extends BarBase {
 		
-		public function Candle( json:Object, group:Number ) {
+		public function Candle( json:Object, group:Number, collection:ObjectCollection ) {
 			
-			super( json, group );
+			super( json, group, collection );
 		}
 		
 		//
