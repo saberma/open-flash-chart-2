@@ -126,10 +126,13 @@
 		protected function resize_helper( sc:ScreenCoords ):Object {
 			//2009.07.24 by MaHB
 			//var tmp:Object = sc.get_bar_coords(this.index, this.group);
-			tr.ace( "this.index:" + this.index );
-			tr.ace( "this.real_group:" + this.real_group );
-			tr.ace( "this.real_group[this.index]:" + this.real_group[this.index] );
-			var tmp:Object = sc.get_bar_coords(this.index, this.real_group[this.index]);
+			//tr.ace( "this.index:" + this.index );
+			//tr.ace( "this.real_group:" + this.real_group );
+			//tr.ace( "this.real_group[this.index]:" + this.real_group[this.index] );
+			var tmp_group:Number = this.group;
+			if (this.real_group != null)
+				tmp_group = this.real_group[this.index];
+			var tmp:Object = sc.get_bar_coords(this.index, tmp_group, this.real_group);
 
 			var bar_top:Number = sc.get_y_from_val(this.top, this.right_axis);
 			var bar_bottom:Number;

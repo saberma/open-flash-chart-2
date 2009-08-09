@@ -324,7 +324,7 @@ package {
 		//
 		// index: the n'th bar from the left
 		//
-		public function get_bar_coords( index:Number, group:Number ):Object {
+		public function get_bar_coords( index:Number, group:Number, real_group:Array):Object {
 			var item_width:Number = this.width_() / this.x_range.count();
 			
 			// the bar(s) have gaps between them:
@@ -338,7 +338,11 @@ package {
 			// 1 bar == 100% wide, 2 bars = 50% wide each
 			//2009.07.24 by MaHB
 			//var bar_width:Number = bar_set_width / this.bar_groups;
-			var bar_width:Number = bar_set_width / this.x_range.count();
+			var bar_num:Number = this.bar_groups;
+			//for special bar3d
+			if ( real_group != null)
+				bar_num = this.x_range.count();
+			var bar_width:Number = bar_set_width / bar_num;
 			//bar_width -= 0.001;		// <-- hack so bars don't quite touch
 			
 			var bar_left:Number = this.left_()+((tmp-bar_set_width)/2);

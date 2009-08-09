@@ -24,7 +24,7 @@ package charts {
 				
 				switch( elements[i]['type'] ) {
 					case 'bar' :
-						collection.add( new Bar( elements[i], bar_group, collection ) );
+						collection.add( new Bar( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 					
@@ -59,47 +59,47 @@ package charts {
 						break;
 						
 					case 'bar_sketch':
-						collection.add( new BarSketch( elements[i], bar_group, collection ) );
+						collection.add( new BarSketch( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 						
 					case 'bar_glass':
-						collection.add( new BarGlass( elements[i], bar_group, collection ) );
+						collection.add( new BarGlass( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 						
 					case 'bar_cylinder':
-						collection.add( new BarCylinder( elements[i], bar_group, collection ) );
+						collection.add( new BarCylinder( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 
 					case 'bar_cylinder_outline':
-						collection.add( new BarCylinderOutline( elements[i], bar_group, collection ) );
+						collection.add( new BarCylinderOutline( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 
 					case 'bar_dome':
-						collection.add( new BarDome( elements[i], bar_group, collection ) );
+						collection.add( new BarDome( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 
 					case 'bar_round':
-						collection.add( new BarRound( elements[i], bar_group, collection ) );
+						collection.add( new BarRound( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 
 					case 'bar_round_glass':
-						collection.add( new BarRoundGlass( elements[i], bar_group, collection ) );
+						collection.add( new BarRoundGlass( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 
 					case 'bar_round3d':
-						collection.add( new BarRound3D( elements[i], bar_group, collection ) );
+						collection.add( new BarRound3D( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 					
 					case 'bar_fade':
-						collection.add( new BarFade( elements[i], bar_group, collection ) );
+						collection.add( new BarFade( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 					
@@ -111,17 +111,17 @@ package charts {
 						break;
 					
 					case 'bar_filled':
-						collection.add( new BarOutline( elements[i], bar_group, collection ) );
+						collection.add( new BarOutline( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 					
 					case 'bar_plastic':
-						collection.add( new BarPlastic( elements[i], bar_group, collection ) );
+						collection.add( new BarPlastic( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 					
 					case 'bar_plastic_flat':
-						collection.add( new BarPlasticFlat( elements[i], bar_group, collection ) );
+						collection.add( new BarPlasticFlat( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 						
@@ -130,7 +130,7 @@ package charts {
 						break;
 					
 					case 'candle':
-						collection.add( new Candle( elements[i], bar_group, collection ) );
+						collection.add( new Candle( elements[i], bar_group, null ) );
 						bar_group++;
 						break;
 		
@@ -141,7 +141,7 @@ package charts {
 			
 				else if ( lv['candle' + name] != undefined )
 				{
-					ob = new BarCandle(lv, c, bar_group, collection);
+					ob = new BarCandle(lv, c, bar_group, null);
 					bar_group++;
 				}
 				

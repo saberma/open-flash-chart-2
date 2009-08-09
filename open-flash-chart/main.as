@@ -342,7 +342,7 @@ package  {
 			
 			if( this.chart_parameters['data-file'] )
 			{
-				// tr.ace( 'Found parameter:' + parameters['data-file'] );
+				tr.ace( 'Found parameter:' + this.chart_parameters['data-file'] );
 				this.load_external_file( this.chart_parameters['data-file'] );
 				//
 				// LOOK:

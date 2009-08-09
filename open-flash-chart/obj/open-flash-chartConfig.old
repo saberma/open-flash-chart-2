@@ -4,12 +4,12 @@
 <flex-config>
   <compiler>
     <source-path append="true">
-      <path-element>C:\TDDownload\open-flash-chart-2-Kvasir\open-flash-chart</path-element>
+      <path-element>H:\Documents\open-flash-chart-2\open-flash-chart</path-element>
       <path-element>C:\Program Files\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
   </compiler>
   <file-specs>
-    <path-element>C:\TDDownload\open-flash-chart-2-Kvasir\open-flash-chart\main.as</path-element>
+    <path-element>H:\Documents\open-flash-chart-2\open-flash-chart\main.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>60</default-frame-rate>
