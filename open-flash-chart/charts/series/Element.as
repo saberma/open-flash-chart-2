@@ -37,9 +37,14 @@
 		
 		public function resize( sc:ScreenCoordsBase ):void {
 			
+			tr.ace( "sc:" + sc );
 			var p:flash.geom.Point = sc.get_get_x_from_pos_and_y_from_val( this._x, this._y, this.right_axis );
 			this.x = p.x;
 			this.y = p.y;
+			tr.ace( "this.x:" + this.x );
+			tr.ace( "this.y:" + this.y );
+			tr.ace( "p.x:" + p.x );
+			tr.ace( "p.y:" + p.y );
 		}
 		
 		//
@@ -136,6 +141,7 @@
 		}
 		
 		public function get_tip_pos():Object {
+			tr.ace( "get_tip_pos:" + this.x + "," + this.y );
 			return {x:this.x, y:this.y};
 		}
 		
@@ -155,7 +161,7 @@
 		 */
 		public function tooltip_replace_labels( labels:XAxisLabels ):void {
 			
-			tr.aces('x label', this._x, labels.get( this._x ));
+			tr.aces('x label', this.x, labels.get( this.x ));
 			this.tooltip = this.tooltip.replace('#x_label#', labels.get( this._x ) );
 		}
 		

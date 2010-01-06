@@ -384,13 +384,16 @@ package charts {
 		 * @param	labels
 		 */
 		public function tooltip_replace_labels( labels:XAxisLabels ):void {
+			tr.ace( "tooltip_replace_labels:" + labels );
 			for ( var i:Number = 0; i < this.numChildren; i++ ) {
+			tr.ace( "this.getChildAt(i):" + this.getChildAt(i) );
 				
 				// filter out the mask elements in line charts
 				if( this.getChildAt(i) is Element ) {
 					
 					var e:Element = this.getChildAt(i) as Element;
 					e.tooltip_replace_labels( labels );
+			tr.ace( "e:" + e );
 				}
 			}
 		}
